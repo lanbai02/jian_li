@@ -1,0 +1,507 @@
+/* ===== 基础信息面板 ===== */
+.base_info_content {
+    padding: 40px !important;
+}
+
+/* ===== 外层容器：改为纵向排列 ===== */
+.info-wrapper {
+    display: flex;
+    flex-direction: column;      /* 改为纵向排列 */
+    height: 100%;
+    position: relative;          /* 让照片可以绝对定位到右上角 */
+}
+
+/* ===== 照片区域：定位到右上角 ===== */
+.info-avatar {
+    position: absolute;          /* 绝对定位，脱离文档流 */
+    top: 30px;                   /* 离顶部距离 */
+    right: 40px;                 /* 离右侧距离 */
+    flex-shrink: 0;
+    width: 130px;                /* 稍微缩小一点，更精致 */
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.info-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ===== 详细信息：占满左侧，从上到下排列 ===== */
+.info-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;      /* 内部也是纵向排列 */
+    justify-content: center;     /* 垂直居中（可选，也可以改成 flex-start 靠上） */
+    /* 给右侧留出照片的空间，防止文字被遮住 */
+    padding-right: 160px;        /* 约等于照片宽度 + 边距 */
+}
+
+.info-details h1 {
+    font-size: 42px;
+    color: #fff;
+    margin: 0 0 20px 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== 信息列表：改为单列 ===== */
+.info-list {
+    display: flex;
+    flex-direction: column;      /* 改为单列纵向排列 */
+    gap: 6px;                    /* 行间距缩小一点，更紧凑 */
+}
+
+/* ===== 每一条信息 ===== */
+.info-item {
+    display: flex;
+    align-items: baseline;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08); /* 分割线淡一点 */
+}
+
+.info-label {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    width: 80px;                 /* 稍微宽一点，让标签对齐 */
+    flex-shrink: 0;
+    font-weight: 500;
+}
+
+.info-value {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 400;
+}
+
+/* ===== 教育背景面板 ===== */
+.education_content {
+    padding: 40px !important;
+}
+
+/* ===== 外层容器 ===== */
+.edu-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ===== 标题 ===== */
+.edu-title {
+    font-size: 32px;
+    color: #fff;
+    margin: 0 0 30px 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
+}
+
+/* ===== 教育经历列表 ===== */
+.edu-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow-y: auto;
+}
+
+/* ===== 单条教育经历 ===== */
+.edu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 28px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(4px);
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.edu-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateX(4px);
+}
+
+/* ===== 左侧：学校 + 专业 ===== */
+.edu-item-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.edu-school {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+.edu-major {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* ===== 右侧：学历 + 时间 ===== */
+.edu-item-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.edu-degree {
+    font-size: 15px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.12);
+    padding: 2px 14px;
+    border-radius: 20px;
+}
+
+.edu-time {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.55);
+}
+/* ===== 技能特长面板 ===== */
+.skills_content {
+    padding: 40px !important;
+}
+
+.skills-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.skills-title {
+    font-size: 32px;
+    color: #fff;
+    margin: 0 0 30px 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
+}
+
+/* ===== 技能网格：两列布局 ===== */
+.skills-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-content: start;
+    overflow-y: auto;
+}
+
+/* ===== 每个技能组 ===== */
+.skills-group {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 20px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(4px);
+    transition: background 0.25s ease;
+}
+
+.skills-group:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.skills-group-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 14px;
+    letter-spacing: 0.5px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== 标签容器 ===== */
+.skills-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* ===== 单个技能标签 ===== */
+.skills-tag {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 6px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.skills-tag:hover {
+    background: rgba(255, 255, 255, 0.22);
+    transform: scale(1.04);
+}
+/* ===== 项目经历面板 ===== */
+.project_content {
+    padding: 40px !important;
+}
+
+.project-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-title {
+    font-size: 32px;
+    color: #fff;
+    margin: 0 0 30px 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
+}
+
+/* ===== 项目列表 ===== */
+.project-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    overflow-y: auto;
+}
+
+/* ===== 单个项目卡片 ===== */
+.project-item {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 22px 28px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(4px);
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.project-item:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateX(4px);
+}
+
+/* ===== 项目头部：名称 + 时间 ===== */
+.project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 8px;
+}
+
+.project-name {
+    font-size: 19px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.3px;
+}
+
+.project-time {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+    flex-shrink: 0;
+    margin-left: 16px;
+}
+
+/* ===== 技术栈 ===== */
+.project-tech {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+
+/* ===== 项目描述 ===== */
+.project-desc {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+/* ===== 竞赛获奖面板 ===== */
+.competition_content {
+    padding: 40px !important;
+}
+
+.competition-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.competition-title {
+    font-size: 32px;
+    color: #fff;
+    margin: 0 0 30px 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
+}
+
+/* ===== 获奖列表 ===== */
+.competition-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    overflow-y: auto;
+}
+
+/* ===== 单个获奖卡片 ===== */
+.competition-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 26px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(4px);
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.competition-item:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateX(4px);
+}
+
+/* ===== 左侧：比赛名称 + 描述 ===== */
+.competition-item-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.competition-name {
+    font-size: 17px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.3px;
+}
+
+.competition-desc {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* ===== 右侧：奖项 + 时间 ===== */
+.competition-item-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+    flex-shrink: 0;
+    margin-left: 20px;
+}
+
+.competition-award {
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    background: rgba(255, 215, 0, 0.18);
+    padding: 4px 16px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 215, 0, 0.15);
+}
+
+.competition-time {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.45);
+}
+/* ===== 工作经历面板 ===== */
+.work_content {
+    padding: 40px !important;
+}
+
+.work-wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.work-title {
+    font-size: 32px;
+    color: #fff;
+    margin: 0 0 30px 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
+}
+
+/* ===== 工作列表 ===== */
+.work-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    overflow-y: auto;
+}
+
+/* ===== 单个工作卡片 ===== */
+.work-item {
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 20px 26px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(4px);
+    transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.work-item:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateX(4px);
+}
+
+/* ===== 工作头部：公司 + 岗位 + 时间 ===== */
+.work-item-left {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+}
+
+.work-company {
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.3px;
+}
+
+.work-position {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 400;
+}
+
+.work-item-right {
+    margin-bottom: 10px;
+}
+
+.work-time {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.45);
+}
+
+/* ===== 工作描述 ===== */
+.work-desc {
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}

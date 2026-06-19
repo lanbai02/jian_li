@@ -1,0 +1,11 @@
+/* ===== 左侧导航项 ===== */
+.backleft > div {
+    cursor: pointer;          /* 鼠标移上变小手 */
+    padding: 15px 20px;       /* 让文字有呼吸感 */
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    transition: background 0.2s;
+}
+.backleft > div:hover {
+    background: rgba(255,255,255,0.15); /* 悬停高亮，提升交互感 */
+}

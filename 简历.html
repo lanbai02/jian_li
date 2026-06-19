@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简历</title>
+
+    <!-- ===== 引入 CSS ===== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/left.css">
+    <link rel="stylesheet" href="css/right.css">
+</head>
+
+<!-- ========== 主体 ========== -->
+<body>
+    <div class="background">
+        <!-- 左侧导航区 -->
+        <div class="backleft">
+            <div class="base_info">基础信息</div>
+            <div class="education">教育背景</div>
+            <div class="skills">技能特长</div>
+            <div class="project">项目经历</div>
+            <div class="competition">竞赛获奖</div>
+            <div class="work">工作经历</div>
+        </div>
+
+        <!-- 右侧内容区（所有面板重叠在一起） -->
+        <div class="backright">
+            <!-- 默认显示第一个（基础信息），加上 active 类 -->
+            <div class="base_info_content active">
+                <div class="info-wrapper">
+                    <!-- 右上角：照片 -->
+                    <div class="info-avatar">
+                        <img src="head.jpg" alt="头像">
+                    </div>
+
+                    <!-- 左侧：详细信息（从上到下排列） -->
+                    <div class="info-details">
+                        <h1>伍家良</h1>
+                        <div class="info-list">
+                            <div class="info-item">
+                                <span class="info-label">电话</span>
+                                <span class="info-value">199-6047-1563</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">邮箱</span>
+                                <span class="info-value">2627181663@qq.com</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">地址</span>
+                                <span class="info-value">中国 · 成都</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">生日</span>
+                                <span class="info-value">2005年 3 月</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">求职意向</span>
+                                <span class="info-value">全栈开发工程师</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="education_content">
+                <div class="edu-wrapper">
+                    <h2 class="edu-title">📚 教育背景</h2>
+                    
+                    <div class="edu-list">
+                        <!-- 第一条教育经历 -->
+                        <div class="edu-item">
+                            <div class="edu-item-left">
+                                <div class="edu-school">成都大学</div>
+                                <div class="edu-major">计算机科学与技术</div>
+                            </div>
+                            <div class="edu-item-right">
+                                <div class="edu-degree">本科</div>
+                                <div class="edu-time">2023.09 - 2027.06</div>
+                            </div>
+                        </div>
+                        
+                        <!-- 第二条教育经历 -->
+                        <div class="edu-item">
+                            <div class="edu-item-left">
+                                <div class="edu-school">达州中学</div>
+                                <div class="edu-major">23届1班</div>
+                            </div>
+                            <div class="edu-item-right">
+                                <div class="edu-degree">高中</div>
+                                <div class="edu-time">2020.09 - 2023.06</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills_content">
+                <div class="skills-wrapper">
+                    <h2 class="skills-title">🛠️ 技能特长</h2>
+                    
+                    <div class="skills-grid">
+                        <!-- 前端 -->
+                        <div class="skills-group">
+                            <div class="skills-group-title">前端开发</div>
+                            <div class="skills-tags">
+                                <span class="skills-tag">HTML5 / CSS3</span>
+                                <span class="skills-tag">JavaScript (ES6+)</span>
+                                <span class="skills-tag">Vue.js</span>
+                                <span class="skills-tag">React</span>
+                                <span class="skills-tag">Tailwind CSS</span>
+                            </div>
+                        </div>
+                        
+                        <!-- 后端 -->
+                        <div class="skills-group">
+                            <div class="skills-group-title">后端开发</div>
+                            <div class="skills-tags">
+                                <span class="skills-tag">Node.js</span>
+                                <span class="skills-tag">Python</span>
+                                <span class="skills-tag">Java</span>
+                                <span class="skills-tag">Spring Boot</span>
+                            </div>
+                        </div>
+                        
+                        <!-- 数据库 -->
+                        <div class="skills-group">
+                            <div class="skills-group-title">数据库</div>
+                            <div class="skills-tags">
+                                <span class="skills-tag">MySQL</span>
+                                <span class="skills-tag">MongoDB</span>
+                                <span class="skills-tag">Redis</span>
+                            </div>
+                        </div>
+                        
+                        <!-- 工具 -->
+                        <div class="skills-group">
+                            <div class="skills-group-title">开发工具</div>
+                            <div class="skills-tags">
+                                <span class="skills-tag">Git</span>
+                                <span class="skills-tag">Docker</span>
+                                <span class="skills-tag">VS Code</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="project_content">
+                <div class="project-wrapper">
+                    <h2 class="project-title">🚀 项目经历</h2>
+                    
+                    <div class="project-list">
+                        <!-- 校园二手交易平台 -->
+                        <div class="project-item">
+                            <div class="project-header">
+                                <div class="project-name">校园二手交易平台</div>
+                                <div class="project-time">2024.03 - 2024.06</div>
+                            </div>
+                            <div class="project-tech">Java + Spring Boot + AI</div>
+                            <div class="project-desc">
+                                担任项目组长，负责项目整体框架搭建、数据库设计与优化、以及互动模块（评论/私信/关注）和工具模块（文件上传/日志/权限校验）的开发。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="competition_content">
+                <div class="competition-wrapper">
+                    <h2 class="competition-title">🏆 竞赛获奖</h2>
+                    
+                    <div class="competition-list">
+                        <!-- 蓝桥杯 -->
+                        <div class="competition-item">
+                            <div class="competition-item-left">
+                                <div class="competition-name">蓝桥杯全国软件和信息技术专业人才大赛</div>
+                                <div class="competition-desc">C/C++ 程序设计大学 B 组 · 第15届</div>
+                            </div>
+                            <div class="competition-item-right">
+                                <div class="competition-award">🥈 省级二等奖</div>
+                                <div class="competition-time">2024.04</div>
+                            </div>
+                        </div>
+                        
+                        <!-- 马蹄杯 · 省银 -->
+                        <div class="competition-item">
+                            <div class="competition-item-left">
+                                <div class="competition-name">马蹄杯程序设计大赛</div>
+                                <div class="competition-desc">第七届 · 省级</div>
+                            </div>
+                            <div class="competition-item-right">
+                                <div class="competition-award">🥈 省级银奖</div>
+                                <div class="competition-time">2024</div>
+                            </div>
+                        </div>
+                        
+                        <!-- 马蹄杯 · 国优 -->
+                        <div class="competition-item">
+                            <div class="competition-item-left">
+                                <div class="competition-name">马蹄杯程序设计大赛</div>
+                                <div class="competition-desc">第七届 · 国家级</div>
+                            </div>
+                            <div class="competition-item-right">
+                                <div class="competition-award">📋 国家优秀奖</div>
+                                <div class="competition-time">2024</div>
+                            </div>
+                        </div>
+                        
+                        <!-- 百度之星 -->
+                        <div class="competition-item">
+                            <div class="competition-item-left">
+                                <div class="competition-name">百度之星程序设计大赛</div>
+                                <div class="competition-desc">第21届 · 初赛</div>
+                            </div>
+                            <div class="competition-item-right">
+                                <div class="competition-award">🥈 初赛银奖</div>
+                                <div class="competition-time">2024</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="work_content">
+                <div class="work-wrapper">
+                    <h2 class="work-title">💼 工作经历</h2>
+                    
+                    <div class="work-list">
+                        <!-- 助教经历 -->
+                        <div class="work-item">
+                            <div class="work-item-left">
+                                <div class="work-company">少儿编程教育机构（兼职）</div>
+                                <div class="work-position">编程助教</div>
+                            </div>
+                            <div class="work-item-right">
+                                <div class="work-time">2024.09 - 2024.12</div>
+                            </div>
+                            <div class="work-desc">
+                                负责 5-6 年级学生的算法课程辅导，讲解基础算法与数据结构，批改并分析课后作业，针对性解答学生疑问，协助主讲教师优化课程内容。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 引入 JS ===== -->
+    <script src="js/main.js"></script>
+</body>
+</html>
